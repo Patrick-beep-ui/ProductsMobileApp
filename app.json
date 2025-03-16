@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "ProductsApp",
-    "slug": "ProductsApp",
+    "slug": "productsapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -23,6 +23,15 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "39f8804b-3c7a-4e4c-8ec6-2a486e14bad2"
+      }
+    },
+    "owner": "psolis18",
+    "plugins": [
+      "expo-sqlite"
+    ]
   }
 }

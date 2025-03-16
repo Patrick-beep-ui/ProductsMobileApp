@@ -1,20 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import ProductsRootStack from './navigators/ProductsStack';
+import { NetInfoContext } from './context/NetworkContext';
+import { DBContext } from './context/ConnectionContext';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NetInfoContext>
+      <DBContext>
+        <NavigationContainer>
+          <ProductsRootStack/>
+        </NavigationContainer>
+      </DBContext>
+    </NetInfoContext>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
